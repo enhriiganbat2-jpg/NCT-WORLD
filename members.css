@@ -1,0 +1,437 @@
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080a08;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
+
+.header {
+    min-height: 75px;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: #101510;
+    border-bottom: 1px solid #293729;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #b9ff39;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #b9ff39;
+}
+
+
+/* =========================
+   PAGE BANNER
+========================= */
+
+.page-banner {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #172317, #080a08);
+    border-bottom: 1px solid #293729;
+}
+
+.small-title {
+    color: #b9ff39;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.page-banner h1 {
+    color: #b9ff39;
+    font-size: clamp(32px, 5vw, 52px);
+    margin: 10px 0;
+}
+
+.page-banner p {
+    color: #c4c4c4;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 88%;
+    max-width: 1250px;
+    margin: 45px auto;
+}
+
+.member-section {
+    margin-bottom: 65px;
+}
+
+.group-title {
+    font-size: 26px;
+    color: #b9ff39;
+    border-left: 4px solid #b9ff39;
+    padding-left: 14px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   MEMBER CARD GRID
+========================= */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: #131713;
+    border: 1px solid #293329;
+    border-radius: 15px;
+    padding: 12px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s,
+                box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #b9ff39;
+    box-shadow: 0 10px 25px #b9ff3915;
+}
+
+.member-photo {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 15px;
+    background: #202620;
+}
+
+.card h3 {
+    color: #fff;
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #b9ff39;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   FORMER NCT MEMBERS
+========================= */
+
+.former-members {
+    padding: 35px 25px;
+    background: linear-gradient(180deg, #0d130d, #080a08);
+    border: 1px solid #253425;
+    border-radius: 18px;
+}
+
+.former-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.former-heading .small-title {
+    color: #b9ff39;
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.former-heading .group-title {
+    display: inline-block;
+    border-left: none;
+    border-bottom: 2px solid #b9ff39;
+    padding: 0 0 10px;
+    margin-bottom: 12px;
+    font-size: clamp(22px, 3vw, 32px);
+}
+
+.former-intro {
+    color: #c4c4c4;
+    font-size: 14px;
+}
+
+
+/* Former member cards */
+
+.former-card {
+    background: #111811;
+    border: 1px solid #293729;
+    border-radius: 15px;
+    padding: 12px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s, border-color 0.3s,
+                box-shadow 0.3s;
+}
+
+.former-card:hover {
+    transform: translateY(-7px);
+    border-color: #b9ff39;
+    box-shadow: 0 10px 30px #b9ff3918;
+}
+
+.former-card .member-photo {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.former-info {
+    padding: 5px 7px 12px;
+}
+
+.member-label {
+    display: inline-block;
+    color: #b9ff39;
+    border: 1px solid #43552c;
+    background: #1a2614;
+    border-radius: 20px;
+    padding: 4px 10px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.former-info h3 {
+    color: #fff;
+    font-size: 23px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.former-info p {
+    color: #c5c5c5;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+}
+
+.former-info p strong {
+    color: #b9ff39;
+}
+
+.former-info a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: #b9ff39;
+    color: #080a08;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.former-info a:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #101510;
+    border-top: 1px solid #293729;
+    padding: 25px 15px;
+    text-align: center;
+    color: #aaa;
+    font-size: 13px;
+}
+
+.footer p + p {
+    margin-top: 5px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+    .container {
+        width: 92%;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .member-photo {
+        height: 240px;
+    }
+
+    .former-card .member-photo {
+        height: 250px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+    .header {
+        justify-content: center;
+        padding: 18px 4%;
+    }
+
+    .navbar {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 11px;
+    }
+
+    .page-banner {
+        padding: 50px 15px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .group-title {
+        font-size: 22px;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .member-photo {
+        height: 210px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .former-members {
+        padding: 25px 12px;
+    }
+
+    .former-heading {
+        margin-bottom: 25px;
+    }
+
+    .former-heading .group-title {
+        font-size: 21px;
+    }
+
+    .former-card {
+        padding: 8px;
+    }
+
+    .former-card .member-photo {
+        height: 190px;
+    }
+
+    .former-info {
+        padding: 5px 3px 10px;
+    }
+
+    .former-info h3 {
+        font-size: 18px;
+    }
+
+    .former-info p {
+        font-size: 12px;
+    }
+
+    .former-info a {
+        font-size: 10px;
+        padding: 9px 10px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .member-photo,
+    .former-card .member-photo {
+        height: 300px;
+    }
+
+    .former-info h3 {
+        font-size: 21px;
+    }
+}
